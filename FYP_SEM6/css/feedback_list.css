@@ -1,0 +1,43 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid;
+  padding: 8px;
+  text-align: left;
+}
+.delete-link {
+  color: blue;
+  text-decoration: none;
+}
+.delete-link:hover {
+  text-decoration: underline;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between; /* This will push the logout button to the right */
+  align-items: center; /* This will vertically center both items */
+}
+
+.logout_button1 {
+  background-color: black; /* Change this to your preferred color */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.logout_button1 a {
+  color: white;
+  text-decoration: none;
+}
+
+.logout_button1:hover {
+  background-color: grey; /* Change to a darker shade on hover */
+}

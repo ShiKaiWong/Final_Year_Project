@@ -1,0 +1,296 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Reset default browser styles */
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+/* Body styles */
+
+/* Heading 1 */
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px; /* Increase margin */
+  color: #333;
+  font-size: 2em; /* Increase font size */
+}
+/* Heading 1 */
+
+/* Heading 2 */
+h2 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px; /* Increase margin */
+  color: #333;
+}
+/* Heading 2 */
+
+/* Heading 3 */
+h3 {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  text-align: center;
+  color: #333;
+  font-size: 1.3em;
+  width: 80%;
+}
+/* Heading 3 */
+/* Navigation Bars */
+.nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #e9ecf2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  z-index: 1000; /* Ensure the navigation bar stays on top */
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  position: relative;
+  padding: 0.5rem 2rem;
+}
+
+.nav__item > a {
+  color: #3c3e42;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.nav__item > a:hover {
+  color: #fff;
+}
+
+.nav__toggler {
+  opacity: 0.5;
+  transition: opacity 0.15s;
+  cursor: pointer;
+  display: none;
+}
+
+.nav__brand {
+  color: #3c3e42;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* dropdown list */
+.dropdown-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #e9ecf2;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 0; /* Add some padding */
+  min-width: 50px; /* Minimum width for the dropdown */
+}
+
+.nav__item:hover .dropdown-options {
+  display: block;
+}
+
+.dropdown-options .nav__item a {
+  padding: 5px 10px;
+  white-space: nowrap;
+  display: block;
+}
+/* dropdown list */
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+  .nav__list {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background: #e9ecf2;
+  }
+
+  .nav__item {
+    border-bottom: 1px solid #222;
+  }
+
+  .nav__toggler {
+    display: block;
+  }
+
+  .nav__list.collapsible__content {
+    display: flex;
+  }
+}
+
+/* Image setting */
+.picture_image {
+  margin-left: 10px;
+  width: 15vw;
+}
+
+.package-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 10px; /* Add padding to prevent collision with screen edges */
+}
+
+.day-package {
+  display: grid;
+  grid-template-columns: 150px 1fr auto; /* Set grid layout */
+  gap: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  align-items: center;
+}
+
+.day-package img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.day-package-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.day-package-details h4 {
+  margin: 0;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-self: end; /* Align checkbox to the end */
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+/* Ensure elements do not collide on smaller screens */
+@media screen and (max-width: 768px) {
+  .day-package {
+    grid-template-columns: 1fr; /* Change to single column layout on small screens */
+  }
+
+  .day-package img {
+    margin-bottom: 10px;
+    justify-self: center;
+  }
+
+  .checkbox-container {
+    align-self: center;
+    justify-self: center; /* Center checkbox on small screens */
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Space between the buttons */
+  align-items: center;
+  margin-top: 20px; /* Add space above the buttons */
+}
+
+.normal_button {
+  padding: 10px 20px;
+  background-color: #664caf;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  flex: 1; /* Make buttons take up equal space */
+  max-width: 150px; /* Set a maximum width for the buttons */
+  text-align: center; /* Center text within buttons */
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.spacer {
+  flex: 1; /* Spacer takes up the space of the missing Back button */
+}
+
+.select_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align elements horizontally */
+  max-width: 600px; /* Set a max-width for better control */
+  margin: 0 auto; /* Center form on the page */
+  text-align: center; /* Center text inside form */
+}
+
+/* Footer */
+footer {
+  background-color: #e9ecf2;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-content p {
+  margin: 0;
+  color: #333;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  color: #3c3e42;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #4a00e0;
+}
+
+.total-container {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1.2em;
+}

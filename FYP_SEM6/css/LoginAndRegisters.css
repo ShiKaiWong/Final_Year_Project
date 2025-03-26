@@ -1,0 +1,143 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  display: flex;
+  flex-direction: column; /* 使内容和 footer 垂直排列 */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* 确保内容至少覆盖整个视口 */
+  padding-bottom: 60px; /* 给底部留出空间，避免内容被 footer 覆盖 */
+}
+
+/* Container styles */
+.container {
+  max-width: 600px;
+  background-color: #e9ecf2;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 28px;
+  margin: 0 auto;
+  margin-bottom: 40px; /* 增加底部外边距，避免与 footer 重叠 */
+}
+
+/* Heading styles */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 2em;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  padding: 10px; /* 减少内边距 */
+  margin-bottom: 20px; /* 调整底部外边距 */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 17px; /* 调整字体大小 */
+  width: 100%; /* 使输入框在容器内占满 */
+  max-width: 300px; /* 限制最大宽度，避免过大 */
+}
+
+form input[type="submit"] {
+  background-color: #894caf;
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #b3b3b3;
+}
+
+.register_button {
+  text-decoration: none;
+  color: #664caf;
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+}
+
+.normal_button {
+  background-color: #894caf;
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #e9ecf2;
+  padding: 20px 0;
+  text-align: center;
+  z-index: 10; /* 确保 footer 总是在最顶层 */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-content p {
+  margin: 0;
+  color: #333;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  color: #3c3e42;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #4a00e0;
+}

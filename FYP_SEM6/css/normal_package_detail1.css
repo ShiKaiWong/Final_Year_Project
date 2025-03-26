@@ -1,0 +1,234 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Reset default browser styles */
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+/* Body styles */
+
+/* Heading 1 */
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px; /* Increase margin */
+  color: #333;
+  font-size: 2em; /* Increase font size */
+}
+/* Heading 1 */
+
+/* Heading 2 */
+h2 {
+  /* margin-top: 30px;
+      margin-bottom: 30px; //Increase margin */
+  color: #333;
+}
+/* Heading 2 */
+
+/* Heading 3 */
+h3 {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* padding: 20px; */
+  line-height: 1.3;
+  text-align: center;
+  color: #333;
+  font-size: 1.3em;
+  width: 80%;
+}
+/* Heading 3 */
+
+/* Navigation Bars */
+.nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #e9ecf2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  z-index: 1000; /* Ensure the navigation bar stays on top */
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  position: relative;
+  padding: 0.5rem 2rem;
+}
+
+.nav__item > a {
+  color: #3c3e42;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.nav__item > a:hover {
+  color: #fff;
+}
+
+.nav__toggler {
+  opacity: 0.5;
+  transition: opacity 0.15s;
+  cursor: pointer;
+  display: none;
+}
+
+.nav__brand {
+  color: #3c3e42;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+  .nav__list {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background: #e9ecf2;
+  }
+
+  .nav__item {
+    border-bottom: 1px solid #222;
+  }
+
+  .nav__toggler {
+    display: block;
+  }
+
+  .nav__list.collapsible__content {
+    display: flex;
+  }
+}
+
+/* Image setting */
+.picture_image {
+  margin-left: 10px;
+  width: 15vw;
+}
+
+/* Footer */
+footer {
+  background-color: #e9ecf2;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-content p {
+  margin: 0;
+  color: #333;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  color: #3c3e42;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #4a00e0;
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-list {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+}
+
+.detail-item img {
+  max-width: 150px;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+
+.day-detail h2 {
+  margin: 0;
+}
+
+.booking-info {
+  flex: 1;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.booking-info h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.booking-info p {
+  margin: 10px 0;
+}
+
+.booking-info input {
+  width: 50px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.booking-info button {
+  padding: 10px 20px;
+  background-color: #4a00e0;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.booking-info button:hover {
+  background-color: #3a00c0;
+}

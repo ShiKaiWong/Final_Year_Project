@@ -1,0 +1,182 @@
+/* Container for nav and content */
+.container {
+  display: flex;
+  min-height: 100vh; /* Full height */
+}
+
+/* Navigation Bars */
+.nav {
+  position: relative; /* Changed from fixed to relative */
+  height: auto; /* Adjust height to be auto */
+  background: #e9ecf2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  width: 160px; /* Adjust the width as needed */
+  z-index: 1000; /* Ensure the navigation bar stays on top */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  margin-right: 20px; /* Add some space to the right */
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  align-items: center; /* Center the items */
+}
+
+.nav__item {
+  width: 100%;
+  padding: 1rem 1rem; /* Increased padding for larger clickable area */
+  text-align: center; /* Center the text */
+}
+
+.nav__item > a,
+.hidden-button {
+  color: #3c3e42;
+  transition: color 0.3s;
+  text-decoration: none;
+  display: block;
+  font-size: 1.2rem; /* Increase font size */
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  outline: inherit;
+  text-align: center; /* Center the text */
+  width: 100%; /* Make the clickable area span the entire width */
+}
+
+.nav__item > a:hover,
+.hidden-button:hover {
+  color: #fff;
+}
+
+.nav__toggler {
+  opacity: 0.5;
+  transition: opacity 0.15s;
+  cursor: pointer;
+  display: none;
+}
+
+.nav__brand {
+  color: #3c3e42;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem; /* Increase font size */
+  margin-bottom: 1rem;
+  text-align: center; /* Center the text */
+}
+
+/* Content area */
+.content {
+  flex-grow: 1; /* Take up the remaining space */
+  padding: 20px;
+  background: #f4f4f9;
+  overflow-y: auto; /* Allow scrolling if content is too long */
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .nav {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    border-radius: 0; /* Remove rounded corners for mobile */
+  }
+
+  .nav__list {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background: #e9ecf2;
+  }
+
+  .nav__item {
+    border-bottom: 1px solid #222;
+  }
+
+  .nav__toggler {
+    display: block;
+  }
+
+  .nav__list.collapsible__content {
+    display: flex;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between; /* This will push the logout button to the right */
+  align-items: center; /* This will vertically center both items */
+}
+
+.logout_button1 {
+  background-color: black; /* Change this to your preferred color */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.logout_button1 a {
+  color: white;
+  text-decoration: none;
+}
+
+.logout_button1:hover {
+  background-color: grey; /* Change to a darker shade on hover */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid;
+  padding: 8px;
+  text-align: left;
+}
+
+.delete-link {
+  color: blue;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.delete-link:hover {
+  text-decoration: underline;
+}
+
+.edit-link {
+  color: blue; /* You can change the color if you like */
+  text-decoration: none;
+  margin-right: 10px;
+}
+.edit-link:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 150px;
+  max-height: 100px;
+  object-fit: cover;
+}

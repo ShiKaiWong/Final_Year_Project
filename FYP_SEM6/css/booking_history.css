@@ -1,0 +1,234 @@
+/* General settings */
+body,
+html {
+  margin: 60px;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+h3 {
+  text-align: center;
+
+  color: #333;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation Bars */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #e9ecf2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  position: relative;
+  padding: 0.5rem 2rem;
+}
+
+.nav__item > a {
+  color: #3c3e42;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.nav__item > a:hover {
+  color: #fff;
+}
+
+.nav__toggler {
+  opacity: 0.5;
+  transition: opacity 0.15s;
+  cursor: pointer;
+  display: none;
+}
+
+.nav__brand {
+  color: #3c3e42;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+  .nav__list {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background: #e9ecf2;
+  }
+
+  .nav__item {
+    border-bottom: 1px solid #222;
+  }
+
+  .nav__toggler {
+    display: block;
+  }
+
+  .nav__list.collapsible__content {
+    display: flex;
+  }
+}
+
+/* Image setting */
+.picture_image {
+  margin-left: 10px;
+  width: 15vw;
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding-top: 70px; /* Adjust for header height */
+  padding-bottom: 70px; /* Adjust for footer height */
+  width: 100%; /* Ensure the main content takes full width */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #e9ecf2;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-content p {
+  margin: 0;
+  color: #333;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  color: #3c3e42;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #4a00e0;
+}
+
+/* Table styles */
+table {
+  width: 80%; /* Adjusted width for better centering */
+  max-width: 1000px; /* Ensure table is not too wide */
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Buttons and links */
+.logout_button {
+  font-size: 10px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.delete-link {
+  color: blue;
+  text-decoration: none;
+}
+
+.delete-link:hover {
+  text-decoration: underline;
+}
+
+/* Image styling */
+img {
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.package-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.package-detail {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  max-width: 100%;
+}
+
+.package-detail img {
+  flex: 1;
+  max-width: 300px; /* Increase the image size */
+  margin-right: 20px;
+  border-radius: 4px;
+}
+
+.package-detail-text {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
